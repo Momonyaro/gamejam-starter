@@ -24,9 +24,9 @@ var _snapshot_to_save: Dictionary = {}
 
 func _enter_tree() -> void:
 	if AUTOLOAD_ON_INIT:
-		var err := load_slot(0)
+		var err := load_slot()
 		if err != OK:
-			printerr("Failed to load save slot 0, received error code: %d" % err)
+			printerr("Failed to load save slot 0, received error code: %s" % error_string(err))
 
 func _process(_delta: float) -> void:
 	if _snapshot_to_save.size() > 0:
@@ -34,7 +34,8 @@ func _process(_delta: float) -> void:
 		var timestamp: float = _snapshot_to_save.get("timestamp", current_time)
 		
 		if current_time - timestamp > SNAPSHOT_INTERVAL:
-			_write_to_disk(_snapshot_to_save.get("slot", 0), _snapshot_to_save.get("data", {}))
+			print("[SAVE] writing snapshot to disk")
+			_write_to_disk(_snapshot_to_save.get("path", ""), _snapshot_to_save.get("data", {}))
 			_snapshot_to_save = {}
 
 # ---- Public Functions ----
@@ -49,25 +50,29 @@ func write(key: String, value: Variant) -> void:
 func read(key: String, default: Variant) -> Variant:
 	return _save_data.get(key, default)
 
-func save_slot(slot: int, now: bool = false) -> int:
+func save_slot(slot: int = 0, now: bool = false) -> int:
+	var path: String = _get_save_slot_path(slot)
 	if contains_data() == false:
 		return ERR_FILE_EOF
 
 	if now:
-		_write_to_disk(slot, _save_data)
+		_write_to_disk(path, _save_data)
 		_snapshot_to_save = {}
 		return OK
 
-	_snapshot_to_save = { "slot": slot, "data": _save_data, "timestamp": Time.get_unix_time_from_system() }
+	_snapshot_to_save = { "path": path, "data": _save_data, "timestamp": Time.get_unix_time_from_system() }
 	return OK
 
-func load_slot(slot: int) -> int:
+func load_slot(slot: int = 0) -> int:
 	var path: String = _get_save_slot_path(slot)
 	if FileAccess.file_exists(path) == false:
 		return ERR_FILE_NOT_FOUND
 
 	var file := FileAccess.open(path, FileAccess.READ)
 	var json_str: String = file.get_as_text()
+	if json_str == "":
+		return ERR_FILE_EOF
+	
 	var json_data: Dictionary = JSON.parse_string(json_str)
 	file.close()
 	
@@ -84,8 +89,10 @@ func load_slot(slot: int) -> int:
 
 # ---- Private Functions ----
 
-func _write_to_disk(slot: int, data: Dictionary) -> void:
-	var path: String = _get_save_slot_path(slot)
+func _write_to_disk(path: String, data: Dictionary) -> void:
+	if path == "" or data.size() == 0:
+		return;
+	
 	var file := FileAccess.open(path, FileAccess.WRITE)
 	
 	data["f_print"] = FINGERPRINT
