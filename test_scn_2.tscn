@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c7cl5u5givpor"]
+
+[node name="TestScn2" type="Node2D" unique_id=466388591]
+
+[node name="Label" type="Label" parent="." unique_id=305632237]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 61.0
+offset_bottom = 39.0
+text = "SCN 2"

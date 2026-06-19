@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Game Jam Starter"
+run/main_scene="uid://6myj3jy0iodv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
 
 Save="*uid://du10gvs5mcamh"
-Transitioner="*uid://mwwqxq846roe"
+Transition="*uid://mwwqxq846roe"
+Levels="*uid://vow0nqivywof"
 
 [physics]
 
