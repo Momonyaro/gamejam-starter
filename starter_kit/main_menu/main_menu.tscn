@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://mgtvpue4cbe8"]
 
+[ext_resource type="Script" uid="uid://ehxhab4sqe7x" path="res://starter_kit/main_menu/main_menu.gd" id="1_cvwlt"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_j363q"]
 font_size = 64
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1545820229]
+script = ExtResource("1_cvwlt")
 
 [node name="Container" type="Control" parent="." unique_id=991035691]
 layout_mode = 3
