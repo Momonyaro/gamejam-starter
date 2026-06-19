@@ -22,12 +22,12 @@ Four autoloads need to also be added if you don't use the repo project.godot fil
 
 In order to use the SFX and Levels autoloads you also need to create two resources.
 You can either create these and place them in the project root:
-  res://sfx_library.tres - AudioLibraryResource for the SFX autoload to keep track of available sound effects
-  res//game_layout.tres - GameLayoutResource for the Levels autoload to know the scene structure in-game
+  * res://sfx_library.tres - AudioLibraryResource for the SFX autoload to keep track of available sound effects
+  * res//game_layout.tres - GameLayoutResource for the Levels autoload to know the scene structure in-game
 
 Another alternative is to define project settings that allow you to place these resources elsewhere in the project:
-  "application/resources/game_layout" should be a string pointing to the file path
-  "application/resources/sfx_library" should be a string pointing to the file path
+  * "application/resources/game_layout" should be a string pointing to the file path
+  * "application/resources/sfx_library" should be a string pointing to the file path
 
 ## So it's NOT plug-and-play?
 Nope, not right now. It kind of is if you instead just use the entire starter-kit repo as a jumping off point. We already have everything set up for testing so why not make use of it?
