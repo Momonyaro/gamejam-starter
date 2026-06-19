@@ -6,12 +6,13 @@ var _initialized: bool
 # ---- Godot Events ----
 
 func _enter_tree() -> void:
-	var project_setting_exists := ProjectSettings.has_setting("levels/game_layout")
+	var project_setting_exists := ProjectSettings.has_setting("application/resources/game_layout")
 	if project_setting_exists:
-		var path: String = ProjectSettings.get_setting("levels/game_layout")
+		var path: String = ProjectSettings.get_setting("application/resources/game_layout")
 		if path != "" && FileAccess.file_exists(path):
 			_game_layout = ResourceLoader.load(path)
 			_initialized = true
+			return
 			
 	var is_in_root := FileAccess.file_exists("res://game_layout.tres")
 	if is_in_root:

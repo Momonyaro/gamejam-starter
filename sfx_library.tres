@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AudioLibraryResource" format=3 uid="uid://0trt0dl0cprp"]
+
+[ext_resource type="Script" uid="uid://duantw5linsmv" path="res://starter_kit/audio_utils/audio_library_resource.gd" id="1_r2xrk"]
+[ext_resource type="AudioStream" uid="uid://cxpmgvn1h7bke" path="res://wilhelm.ogg" id="1_tjt8b"]
+
+[resource]
+script = ExtResource("1_r2xrk")
+_items = Dictionary[String, AudioStream]({
+"test": ExtResource("1_tjt8b")
+})
+metadata/_custom_type_script = "uid://duantw5linsmv"

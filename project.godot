@@ -13,12 +13,15 @@ config_version=5
 config/name="Game Jam Starter"
 run/main_scene="uid://6myj3jy0iodv"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+resources/game_layout=""
+resources/sfx_library=""
 
 [autoload]
 
 Save="*uid://du10gvs5mcamh"
 Transition="*uid://mwwqxq846roe"
 Levels="*uid://vow0nqivywof"
+SFX="*uid://267j7wow4fkv"
 
 [physics]
 
