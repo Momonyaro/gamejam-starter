@@ -4,6 +4,8 @@ class_name LevelResource extends Resource
 @export var _scene: PackedScene
 @export var _tags: Array[String]
 
+# ---- Public Functions ----
+
 func get_level_name() -> StringName:
 	return _name
 

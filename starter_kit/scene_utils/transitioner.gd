@@ -8,6 +8,8 @@ var _fade_out: Curve
 
 var _transitioning: bool
 
+# ---- Godot Events ----
+
 func _ready():
 	process_mode = PROCESS_MODE_ALWAYS # Needed for fade_in/out
 	fade_rect.visible = false
@@ -15,6 +17,8 @@ func _ready():
 func _process(_delta: float):
 	if _transitioning && get_tree().paused == false && _target_scene != null:
 		_internal_transition_to()
+
+# ---- Public Functions ----
 
 static func get_basic_fade_in() -> Curve:
 	var curve := Curve.new()
@@ -36,6 +40,8 @@ func transition_to(scene: PackedScene, fade_in: Curve, fade_out: Curve) -> void:
 	_target_scene = scene
 	_fade_in = fade_in
 	_fade_out = fade_out
+	
+# ---- Private Functions ----
 	
 func _internal_transition_to() -> void:
 	get_tree().paused = true
