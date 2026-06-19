@@ -20,13 +20,13 @@ func _process(_delta: float):
 
 # ---- Public Functions ----
 
-static func get_basic_fade_in() -> Curve:
+func get_basic_fade_in() -> Curve:
 	var curve := Curve.new()
 	curve.add_point(Vector2(0.0, 0.0))
 	curve.add_point(Vector2(1.0, 1.0))
 	return curve
 
-static func get_basic_fade_out() -> Curve:
+func get_basic_fade_out() -> Curve:
 	var curve := Curve.new()
 	curve.add_point(Vector2(0.0, 1.0))
 	curve.add_point(Vector2(1.0, 0.0))

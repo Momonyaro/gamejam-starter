@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://mwwqxq846roe"]
 
-[ext_resource type="Script" uid="uid://d1knuojinglaf" path="res://starter_kit/scene_utils/transitioner.gd" id="1_krdnc"]
+[ext_resource type="Script" uid="uid://d1knuojinglaf" path="res://starter_kit/scene_utils/transition_autoload.gd" id="1_vfo8k"]
 
 [node name="Transitioner" type="CanvasLayer" unique_id=1555147809]
 layer = 99
-script = ExtResource("1_krdnc")
+script = ExtResource("1_vfo8k")
 
 [node name="Container" type="Control" parent="." unique_id=919920755]
 layout_mode = 3
