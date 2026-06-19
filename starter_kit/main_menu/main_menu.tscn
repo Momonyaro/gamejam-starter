@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ehxhab4sqe7x" path="res://starter_kit/main_menu/main_menu.gd" id="1_cvwlt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j363q"]
-font_size = 64
+font_size = 76
 
 [node name="MainMenu" type="CanvasLayer" unique_id=1545820229]
 script = ExtResource("1_cvwlt")
