@@ -36,10 +36,14 @@ func play_positional_2d(key: String, position: Vector2) -> void:
 	var sound_item: AudioStreamPlayer2D = load("2d_sound_item.gd").new()
 	sound_item.stream = _sfx_library.get_item(key)
 	
+	if get_tree().current_scene == null:
+		printerr("Could not play sound, current scene is null.")
+		return
+	
 	get_tree().current_scene.add_child(sound_item)
 	sound_item.global_position = position
 
-func play_positional_3d(key: String, position: Vector3) -> void:
+func play_positional_3d(_key: String, _position: Vector3) -> void:
 	push_error("Not implemented.")
 	pass
 
