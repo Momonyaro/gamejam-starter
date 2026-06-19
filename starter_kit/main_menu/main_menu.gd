@@ -1,10 +1,7 @@
 extends CanvasLayer
 
-# TODO: Add initial play button and use the level utility to allow for level selection
-# This will ultimately break the spearation that I want between our components 
-# but if I come up with something better I'll change it.
-
-# Otherwise, just make several versions of a main menu that layer in different functionality
+#NOTE: Currently it seems like the layered approach is working. This might mean that we don't need much
+#      in terms of code for this general component but I'm keeping the script just in case.
 
 func _ready():
 	pass
