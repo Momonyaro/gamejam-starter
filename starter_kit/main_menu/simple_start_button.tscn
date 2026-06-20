@@ -2,18 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dt0vlf1r1212j" path="res://starter_kit/main_menu/simple_start_button.gd" id="1_pu1su"]
 
-[node name="SimpleStartButton" type="Control" unique_id=549202279]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-script = ExtResource("1_pu1su")
-
-[node name="StartGame" type="Button" parent="." unique_id=948910487]
-layout_mode = 1
+[node name="StartGame" type="Button" unique_id=948910487]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -27,3 +16,4 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 32
 text = "START GAME"
+script = ExtResource("1_pu1su")

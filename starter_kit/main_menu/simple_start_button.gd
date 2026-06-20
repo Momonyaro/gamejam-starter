@@ -1,10 +1,9 @@
-extends Control
+extends Button
 
 @export var target_scene_tag: StringName = &"entry"
-@onready var start_game_button: Button = $StartGame
 
 func _ready() -> void:
-	start_game_button.pressed.connect(_on_pressed)
+	pressed.connect(_on_pressed)
 	
 func _on_pressed() -> void:
 	var target_scene = Levels.get_level_by_tag(target_scene_tag)

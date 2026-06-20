@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://mgtvpue4cbe8" path="res://starter_kit/main_menu/main_menu.tscn" id="1_j5ix0"]
 [ext_resource type="PackedScene" uid="uid://bd4302tq3c17u" path="res://starter_kit/main_menu/simple_start_button.tscn" id="2_b5vy0"]
+[ext_resource type="PackedScene" uid="uid://b4nv02tnbtgvy" path="res://starter_kit/main_menu/level_select.tscn" id="2_f8020"]
 
 [node name="TestScn1" type="Node2D" unique_id=1041487718]
 
@@ -14,4 +15,18 @@ text = "SCN 1"
 
 [node name="MainMenu" parent="." unique_id=1545820229 instance=ExtResource("1_j5ix0")]
 
-[node name="SimpleStartButton" parent="MainMenu" unique_id=549202279 instance=ExtResource("2_b5vy0")]
+[node name="LevelSelect" parent="MainMenu" unique_id=549202279 instance=ExtResource("2_f8020")]
+anchors_preset = 7
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -251.0
+offset_bottom = -160.0
+grow_vertical = 0
+alignment = 1
+
+[node name="SimpleStartButton" parent="MainMenu" unique_id=969659865 instance=ExtResource("2_b5vy0")]
+offset_left = -117.0
+offset_top = -125.0
+offset_right = 117.0
+offset_bottom = -72.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
