@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cdqf28wiyu6r2"]
 
-[ext_resource type="Script" uid="uid://bq2hm3ly7p2c2" path="res://starter_kit/ui_components/health_bar_chunk.gd" id="1_783yu"]
+[ext_resource type="Script" uid="uid://bq2hm3ly7p2c2" path="res://starter_kit/ui_components/chunked_health_bar/health_bar_chunk.gd" id="1_783yu"]
 
 [sub_resource type="Gradient" id="Gradient_783yu"]
 offsets = PackedFloat32Array(0.08522727, 0.36647728, 0.6988636, 1)
