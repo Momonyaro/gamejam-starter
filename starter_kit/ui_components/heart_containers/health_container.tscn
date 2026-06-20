@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bi84i1ax2yrub"]
+
+[ext_resource type="Texture2D" uid="uid://co1mey03j6io8" path="res://starter_kit/ui_components/heart_containers/heart.png" id="1_pkose"]
+
+[node name="HealthContainer" type="TextureProgressBar" unique_id=1472321659]
+texture_filter = 1
+offset_right = 16.0
+offset_bottom = 16.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+stretch_margin_left = 8
+stretch_margin_top = 8
+stretch_margin_right = 8
+stretch_margin_bottom = 8
+texture_under = ExtResource("1_pkose")
+texture_progress = ExtResource("1_pkose")
+tint_under = Color(0.19434929, 0.19434926, 0.19434926, 1)
+tint_progress = Color(0.94939166, 0, 0.1830332, 1)
