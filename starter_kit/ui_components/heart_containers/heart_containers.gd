@@ -9,10 +9,8 @@ extends Control
 
 var _hearts: Array = []
 
-func _ready() -> void:
-	set_health(18, 20)
-
 func set_health(health: int, max_health: int) -> void:
+	print("Setting health to: ", health, " / ", max_health)
 	var heart_count := ceili(max_health / _health_per_heart)
 	
 	for heart in _hearts:
@@ -38,7 +36,8 @@ func _place_heart(heart: Node, index: int, health_ratio: float) -> void:
 	var x_index := index % _hearts_per_row
 	var y_index := floori(index / float(_hearts_per_row))
 	
-	heart.value = health_ratio
-	heart.max_value = 1.0
+	heart.set_health(health_ratio)
+	
 	heart.global_position = self.global_position + Vector2(x_index * _heart_size, y_index * _heart_size)
 	heart.scale = Vector2(_heart_scale, _heart_scale)
+	
