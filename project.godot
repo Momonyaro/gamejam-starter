@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Game Jam Starter"
 run/main_scene="uid://6myj3jy0iodv"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+config/features=PackedStringArray("4.7", "GL Compatibility")
 resources/game_layout=""
 resources/sfx_library=""
 
