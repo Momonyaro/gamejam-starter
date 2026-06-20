@@ -5,7 +5,7 @@
 
 [sub_resource type="Curve" id="Curve_r3rnt"]
 _limits = [0.0, 1.0, 0.0, 0.20145631]
-_data = [Vector2(0, 0), 0.0, 3.3991961, 0, 1, Vector2(0.070388354, 0.23926383), 0.0, 0.0, 0, 0, Vector2(0.20145631, 0), -1.8254945, 0.0, 1, 0]
+_data = [Vector2(0, 0), 0.0, 7.3529406, 0, 1, Vector2(0.068, 0.5), 0.0, 0.0, 0, 0, Vector2(0.20145631, 0), -3.7465446, 0.0, 1, 0]
 point_count = 3
 
 [node name="HealthContainer" type="TextureProgressBar" unique_id=1472321659]
@@ -13,6 +13,7 @@ clip_children = 2
 texture_filter = 1
 offset_right = 16.0
 offset_bottom = 16.0
+offset_transform_enabled = true
 max_value = 1.0
 step = 0.001
 value = 1.0

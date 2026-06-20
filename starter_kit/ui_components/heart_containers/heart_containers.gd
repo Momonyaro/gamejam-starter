@@ -10,7 +10,6 @@ extends Control
 var _hearts: Array = []
 
 func set_health(health: int, max_health: int) -> void:
-	print("Setting health to: ", health, " / ", max_health)
 	var heart_count := ceili(max_health / _health_per_heart)
 	
 	for heart in _hearts:
