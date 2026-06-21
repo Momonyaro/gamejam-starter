@@ -27,7 +27,7 @@ func _on_save_loaded() -> void:
 		level_button_parent.add_child(instance)
 
 func _on_level_button_pressed(level_index: int) -> void:
-	var scene := Levels.get_level_by_index(level_index)
+	var scene: PackedScene = Levels.get_level_by_index(level_index)
 	Transition.transition_to(scene, Transition.get_basic_fade_in(), Transition.get_basic_fade_out())
 
 func _remove_existing_buttons() -> void:
